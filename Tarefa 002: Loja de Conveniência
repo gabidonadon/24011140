@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char nomeProduto;
+    int quantidade;
+    float precoUnitario, valorTotal, valorTotalDia;
+    char continuar = 'S';
+
+            printf("Digite o nome do produto: ");
+            scanf("%c", &nomeProduto);
+
+            REPETE:
+
+            printf("Digite a quantidade vendida: ");
+            scanf("%d", &quantidade);
+
+            printf("Digite o preco unitario: ");
+            scanf("%f", &precoUnitario);
+
+            valorTotal=(quantidade*precoUnitario);
+            printf("Valor total da venda de %c: %.2f\n", nomeProduto, valorTotal);
+
+            valorTotalDia += valorTotal;
+            printf("Deseja registrar outra venda? (S/N): ");
+            scanf(" %c", &continuar);
+
+            if (continuar == 'S')
+            {
+               goto REPETE;
+            }
+            if (continuar != 'S')
+           {
+               printf("Valor total arrecadado no dia: R$ %.2f\n", valorTotalDia);
+           }
+           return 0;
+}
