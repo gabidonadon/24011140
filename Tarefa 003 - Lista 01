@@ -1,0 +1,351 @@
+Exercício 1
+A) 
+#include <stdio.h>
+
+int main() {
+    long long int n = 4000000000;
+
+    printf("%lld\n", n);
+
+    return 0;
+}
+
+
+B)
+#include <stdio.h> 
+
+int main() {
+    int a;
+
+    printf("%d\n", a);
+
+    return 0;
+}
+
+
+C) 
+#include <stdio.h> 
+
+int main() {
+
+printf("%d\n", 4); 
+printf("%d\n", 2); 
+
+return 0;
+}
+
+
+D)
+#include <stdio.h>
+
+int main() {
+int a;
+
+printf("%d", a);
+scanf("%d", &a);
+
+return 0;
+}
+
+
+
+
+
+Exercício 2
+A) 
+#include <stdio.h>
+
+int main() {
+    int num1, num2, num3;
+
+    printf("Digite o primeiro número: ");
+    scanf("%d", &num1);
+
+    printf("Digite o segundo número: ");
+    scanf("%d", &num2);
+
+    printf("Digite o terceiro número: ");
+    scanf("%d", &num3);
+
+    printf("Os números na ordem inversa são: %d, %d, %d", num3, num2, num1);
+    return 0;
+}
+
+
+B)
+#include <stdio.h>
+
+int main() {
+    char nome[10];
+
+    printf("Ola eu sou o Numero 1, como e seu nome?: ");
+    scanf("%99s", &nome);
+
+    printf("Bem-vindo ao clube %s!\n", nome);
+
+    return 0;
+}
+
+
+C)
+#include <stdio.h>
+
+int main() {
+    char nome[100];
+
+    printf("Digite seu nome: ");
+    scanf("%99s", nome);
+
+    int idade, diasdevida;
+
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+
+    diasdevida = idade * 365;
+    printf("Olá %s, você possui aproximadamente %d dias de vida.\n", nome, diasdevida);
+
+    return 0;
+}
+
+
+D)
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float raio, area;
+
+    printf("Digite o raio do circulo: ");
+    scanf("%f", &raio);
+
+    area = (M_PI * raio * raio);
+    printf("A area encontrada para o circulo foi %f", area);
+
+    return 0;
+}
+
+
+E) 
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float altura, largura;
+    float latas_de_tinta;
+
+    printf("Digite a altura da parede (em metros): ");
+    scanf("%f", &altura);
+
+    printf("Digite a largura da parede (em metros): ");
+    scanf("%f", &largura);
+
+    latas_de_tinta = (altura * largura * 0.3) / 2;
+
+    int latas_necessarias = (int) round(latas_de_tinta);
+
+    printf("A quantidade necessaria de latas de tinta sera: %d\n", latas_necessarias);
+
+    return 0;
+}
+
+
+F) 
+#include <stdio.h>
+
+int main() {
+    float fahrenheit, centigrado;
+
+    printf("Digite a temperatura em graus Fahrenheit: ");
+    scanf("%f", &fahrenheit);
+
+    centigrado = (5.0 / 9.0) * (fahrenheit - 32);
+
+    printf("A temperatura em graus Celsius é: %.2f\n", centigrado);
+
+    return 0;
+}
+
+
+G)
+#include <stdio.h>
+
+int main() {
+    float P, V, T, M;
+
+    printf("Digite a pressao do pneu: ");
+    scanf("%f", &P);
+
+    printf("Digite o volume do pneu: ");
+    scanf("%f", &V);
+
+    printf("Digite a temperatura do pneu (em Fahrenheit): ");
+    scanf("%f", &T);
+
+    M = (P * V) / (0.37 * (T + 460));
+
+    printf("A massa de ar no pneu é: %.2f", M);
+
+    return 0;
+}
+
+
+ H) 
+#include <stdio.h>
+
+int main() {
+    int termo1, R, N, termoN;
+
+    printf("Digite o primeiro termo da PA: ");
+    scanf("%i", &termo1);
+
+    printf("Digite a razao da PA: ");
+    scanf("%i", &R);
+
+    printf("Digite o numero N para encontrar o N-esimo termo: ");
+    scanf("%i", &N);
+
+    termoN = termo1 + (N - 1) * R;
+    printf("O N-esimo termo da PA e: %d\n", termoN);
+
+    return 0;
+}
+
+
+I)
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float a, b, c, delta, raiz1, raiz2;
+
+    printf("Digite o coeficiente a: ");
+    scanf("%f", &a);
+
+    printf("Digite o coeficiente b: ");
+    scanf("%f", &b);
+
+    printf("Digite o coeficiente c: ");
+    scanf("%f", &c);
+
+    delta = b * b - 4 * a * c;
+    if (delta > 0)
+   {
+        raiz1 = (-b + sqrt(delta)) / (2 * a);
+        raiz2 = (-b - sqrt(delta)) / (2 * a);
+        printf("As raizes da equacao sao: %.2f e %.2f\n", raiz1, raiz2);
+    }
+    else if (delta == 0)
+    {
+        raiz1 = -b / (2 * a);
+        printf("A equacao tem uma raiz dupla: %.2f\n", raiz1);
+    }
+     else {
+        printf("A equacao nao possui raizes reais");
+    }
+    return 0;
+}
+
+
+J)
+#include <stdio.h>
+
+int main() {
+    int notas1, notas10, notas50, notas100, total;
+
+    printf("Digite a quantidade de notas de 1 real: ");
+    scanf("%i", &notas1);
+
+    printf("Digite a quantidade de notas de 10 reais: ");
+    scanf("%i", &notas10);
+
+    printf("Digite a quantidade de notas de 50 reais: ");
+    scanf("%i", &notas50);
+
+    printf("Digite a quantidade de notas de 100 reais: ");
+    scanf("%i", &notas100);
+
+    total = notas1 * 1 + notas10 * 10 + notas50 * 50 + notas100 * 100;
+    printf("Valor total em dinheiro: %i reais\n", total);
+
+    return 0;
+}
+
+
+L)
+#include <stdio.h>
+
+int main() {
+    int total, notas100, notas50, notas10, notas5, notas1;
+
+    printf("Digite o valor total em dinheiro: ");
+    scanf("%i", &total);
+
+    notas100 = total / 100;
+    total = total % 100;
+    notas50 = total / 50;
+    total = total % 50;
+    notas10 = total / 10;
+    total = total % 10;
+    notas5 = total / 5;
+    total = total % 5;
+    notas1 = total;
+
+    printf("Notas de 100 reais: %d\n", notas100);
+    printf("Notas de 50 reais: %d\n", notas50);
+    printf("Notas de 10 reais: %d\n", notas10);
+    printf("Notas de 5 reais: %d\n", notas5);
+    printf("Notas de 1 real: %d\n", notas1);
+
+    return 0;
+}
+
+
+
+
+
+Exercício 3
+#include <stdio.h>
+
+int main() {
+    float total_investimento = 1000;
+    float preco_acao1 = 24.13, preco_acao2 = 11.00, preco_acao3 = 38.65;
+    float dividendo_acao1 = 17.00, dividendo_acao2 = 35.00, dividendo_acao3 = 25.00;
+    int qtd_acao1, qtd_acao2, qtd_acao3;
+    float valor_investido_acao1, valor_investido_acao2, valor_investido_acao3;
+    float dy_acao1, dy_acao2, dy_acao3;
+
+    printf("Quantas unidades da Acao 1 deseja comprar? (R$24,13/unidade): ");
+    scanf("%i", &qtd_acao1);
+
+    printf("Quantas unidades da Acao 2 deseja comprar? (R$11,00/unidade): ");
+    scanf("%i", &qtd_acao2);
+
+    printf("Quantas unidades da Acao 3 deseja comprar? (R$38,65/unidade): ");
+    scanf("%i", &qtd_acao3);
+
+    valor_investido_acao1 = qtd_acao1 * preco_acao1;
+    valor_investido_acao2 = qtd_acao2 * preco_acao2;
+    valor_investido_acao3 = qtd_acao3 * preco_acao3;
+
+    if (valor_investido_acao1 + valor_investido_acao2 + valor_investido_acao3 > total_investimento) {
+        printf("Você excedeu o limite de investimento de R$ 1.000,00. Ajuste as quantidades de acoes.\n");
+    }
+    else {
+        dy_acao1 = (dividendo_acao1/preco_acao1) * 100;
+        dy_acao2 = (dividendo_acao2/preco_acao2) * 100;
+        dy_acao3 = (dividendo_acao3/preco_acao3) * 100;
+
+        printf("Dividend Yield da Acao 1: %.2f%%\n", dy_acao1);
+        printf("Dividend Yield da Acao 2: %.2f%%\n", dy_acao2);
+        printf("Dividend Yield da Acao 3: %.2f%%\n", dy_acao3);
+
+        printf("Valor investido na Acao 1: RS %.2f\n", valor_investido_acao1);
+        printf("Valor investido na Acao 2: RS %.2f\n", valor_investido_acao2);
+        printf("Valor investido na Acao 3: RS %.2f\n", valor_investido_acao3);
+
+        printf("Valor total investido: R$%.2f\n", valor_investido_acao1 + valor_investido_acao2 + valor_investido_acao3);
+    }
+    return 0;
+}
+
+
