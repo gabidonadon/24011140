@@ -1,4 +1,4 @@
-Exercício 1
+EXERCÍCIO 1
 A) 
 #include <stdio.h>
 
@@ -51,7 +51,7 @@ return 0;
 
 
 
-Exercício 2
+EXERCÍCIO 2
 A) 
 #include <stdio.h>
 
@@ -303,7 +303,7 @@ int main() {
 
 
 
-Exercício 3
+EXERCÍCIO 3
 #include <stdio.h>
 
 int main() {
